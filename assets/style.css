@@ -2,4 +2,13 @@
     --nav-blue: #0897cf;
     --detail-color: #66edf1;
     --sea-background: #1d3c58;
+    --body-text-color: white;
+}
+
+
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 1.5;
+    color:var(--body-text-color);
+    background-color: (var(--sea-background));
 }
