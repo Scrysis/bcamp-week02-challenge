@@ -1,75 +1,86 @@
-:root{
+:root {
     --nav-blue: #10536d;
     --detail-color: #1f6a9c;
     --sea-background: #c8def3;
-    --body-textcolor: rgb(0, 0, 0);
+    --body-textcolor: rgb(16, 15, 24);
+    --card-highlight: rgb(77, 174, 190);
 }
 
+html {
+    scroll-behavior: smooth;
+}
 
-body{
+body {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 10px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     line-height: 1.5;
-    color:var(--body-text-color);
+    color: var(--body-text-color);
     background-color: var(--sea-background);
 }
 
+h2 {
+    font-size: 28px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+img {
+    width: 700px;
+    height: auto;
+}
+
 .header {
-display: flex;
-justify-content: space-between;
-width: 100%;
-padding: 10px;
-font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-background-color: var(--nav-blue);
-color: var(--sea-background);
+    grid-column: 1;
+    grid-row: 1;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: var(--nav-blue);
+    color: var(--sea-background);
 }
 
 .header h1 {
-    display: inline;
-    font-size: 48px;
+
+    font-size: 38px;
     background-color: var(--nav-blue);
 }
 
-.header nav{
-    
-    display: inline;
+nav {
+
+    grid-column: 2;
+    grid-row: 1;
     padding-top: 10px;
-    margin-right: 30px;
-    
+
+
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 28px;
     background-color: var(--nav-blue);
 }
 
-.header nav ul {
+nav ul {
     list-style-type: none;
     float: right;
 }
 
-.header nav ul li {
-    /* display: inline-block; */
-    float: inline-end; 
+nav ul li {
+
+    float: inline-end;
     margin-left: 30px;
 }
 
-.header a{
+.header a {
     color: var(--sea-background);
 }
 
 a {
-    
+
     text-decoration: none;
 }
 
-p{
+p {
     color: var(--body-text-color);
-}
-.dogProgrammer {
-    width: 100%;
-    height: 1000px;
-    margin-bottom: 25px;
-    background-image: url("./English_springer_on_a_bed.jpg");
-    background-size: cover;
-    background-position: center;
 }
 
 main {
@@ -77,38 +88,67 @@ main {
     flex-wrap: wrap;
 }
 
-.card{
-    flex: 1 0 400px;
-    padding: 10px;
+.container {
+    object-fit: contain;
+}
+
+.dogProgrammer {
+    grid-row: 2;
+    grid-column: span 2;
+    /* width: 100%;
+     */
+    height: 1000px;
+    margin-bottom: 25px;
+    background-image: url("./English_springer_on_a_bed.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#aboutme {
+    grid-column: 1;
+    grid-row: 3;
+    font-size: 28;
+    color: var(--body-text-color);
+}
+
+#aboutmeblurb p {
+    grid-row: 3;
+    grid-column: 2;
+    font-size: 22px;
+}
+
+#work {
+    grid-row: 4;
+    grid-column: 1;
+}
+
+.cardBig {
+    
+    width: 30%;
+    padding: 20px;
     text-align: center;
     border-style: solid;
-    border-width: 20px;
-    border-color: var(--detail-color);
+    border-width: 10px;
+    border-color: var(--card-highlight);
+    background-color: var(--detail-color);
 }
 
-.card.primeCard{
-    flex: 100%;
+.cardBig img{
+    width: 100%;
 }
 
-
-/* .row {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    margin-left: -1.5rem;
-    margin-right: -1.5rem;
-  }
-  
-  .justify-center {
-    justify-content: center;
-  }
-  
-  /* using a mobile-first approach, set base column width to be 100% and we'll update it using media queries for larger screen sizes */
- /* .card-column {
-    flex: 1 0 100%;
-    padding: 1.5rem;
-    /* when the screen resizes, make it so our columns don't jump in size */
-   /* transition: flex-basis 500ms linear;
-    margin-bottom: 1.5rem;
-  }
- */  
+.card {
+    flex-grow: 1;
+    flex-shrink: 0.5;
+    width: 300px;
+    padding: 10px;
+    margin: 1px;
+    text-align: center;
+    border-style: solid;
+    border-width: 5px;
+    border-color: var(--card-highlight);
+    background-color: var(--detail-color);
+}
+.card img{
+    width: 100%;
+}
