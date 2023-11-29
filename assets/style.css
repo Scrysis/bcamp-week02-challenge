@@ -2,7 +2,7 @@
     --nav-blue: #10536d;
     --detail-color: #1f6a9c;
     --sea-background: #c8def3;
-    --body-textcolor: rgb(16, 15, 24);
+    --body-textcolor: rgb(43, 61, 87);
     --card-highlight: rgb(77, 174, 190);
 }
 
@@ -61,6 +61,7 @@ nav {
 }
 
 nav ul {
+    margin-right: 20px;
     list-style-type: none;
     float: right;
 }
@@ -69,6 +70,7 @@ nav ul li {
 
     float: inline-end;
     margin-left: 30px;
+    
 }
 
 .header a {
@@ -76,7 +78,7 @@ nav ul li {
 }
 
 a {
-
+    color: var(--sea-background);
     text-decoration: none;
 }
 
@@ -88,6 +90,8 @@ main {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
+    grid-row: 4;
+    grid-column: 2;
 }
 
 .container {
@@ -111,6 +115,10 @@ main {
     grid-row: 3;
     font-size: 28;
     color: var(--body-text-color);
+    padding-right: 20px;
+    text-align: end;
+    border-right: 8px solid var(--nav-blue);
+    color: var(--nav-blue);
 }
 
 #aboutmeblurb p {
@@ -122,13 +130,54 @@ main {
 #work {
     grid-row: 4;
     grid-column: 1;
+    padding-right: 20px;
+    text-align: end;
+    border-right: 8px solid var(--nav-blue);
+    color: var(--nav-blue);
+}
+#resume {
+    grid-column: 1;
+    grid-row: 5;
+    font-size: 28;
+    color: var(--nav-blue);
+    padding-right: 20px;
+    text-align: end;
+    border-right: 8px solid var(--nav-blue);
+}
+#resumeItem{
+    grid-column: 2;
+    grid-row: 5;
+    color: var(--nav-blue);
+    font-size: 30px;
+    margin-left: 30px;
+}
+#contact{
+    grid-column: 1;
+    grid-row: 6;
+    font-size: 28;
+    color: var(--nav-blue);
+    padding-right: 20px;
+    text-align: end;
+    border-right: 8px solid var(--nav-blue);
+}
+#contactItems{
+    grid-column: 2;
+    grid-row: 6;
+}
+#contactItems ul{
+    list-style-type: none;
+}
+#contactItems ul li{
+    float: inline-start;
+    margin-left: 30px;
+    font-size: 22px;
+    color: var(--nav-blue);
 }
 
 .cardBig {    
     width: 100%;
-    flex-grow: 1 1 500px;
-    flex-shrink: 0.5;
-    height: calc(width * 0.5);
+    height: 700px;
+    /* height: calc(width * 0.5); */
     padding: 20px;
     text-align: center;
     border-style: solid;
@@ -143,6 +192,7 @@ main {
     width: 100%;
     object-fit: cover;
     overflow: hidden;
+    transition: ease-out 1s;
 }
 
 .card {    
@@ -165,15 +215,38 @@ main {
     width: 100%;
     object-fit: cover;
     overflow: hidden;
+    transition: ease-out 1s;
 }
 .cardInfo{
     position:relative;
     text-align: center;
-    bottom: 20%;
+    bottom: 15%;
     left: 1px;
     z-index: 1;
     background-color: var(--card-highlight);
     color: var(--sea-background);
     width: 20%;
-    height: 75px;
+    height: 50px;
+}
+/*  A little help figuring out which effect to put on the images from https://thebrandsmen.com/css-image-hover-effects/
+Also got couldn't resist trying to put in the transition effect in there as well. */
+.cardBig img:hover{
+    opacity: 50%;
+    transition: 1s;
+    transition-delay: 250ms;
+    
+}
+/* Got a little help figuring out how to smoothly transition back from the hover animation from
+ https://stackoverflow.com/questions/54948759/css-animation-on-hover-snaps-back-to-default-size-after-hovering-away */
+.card img:hover{
+    opacity: 50%;
+    transition: 1s ease;
+    transition-delay: 250ms;
+    
+}
+
+
+@media screen and (max-width: 574px) {
+    /* Stopped here.  For real this time. */
+    
 }
