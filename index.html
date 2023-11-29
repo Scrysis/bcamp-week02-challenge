@@ -1,70 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sully the Programmer</title>
-    <link rel="stylesheet" href="./assets/reset.css"/>
-    <link rel="stylesheet" href="./assets/style.css".>
+    <link rel="stylesheet" href="./assets/reset.css" />
+    <link rel="stylesheet" href="./assets/style.css" .>
 
 </head>
-<body>
-    <header  class="header">
-        <h1><a href="index.html">Sully the Dog</a> </h1>
 
+<body>
+    <header class="header">
         
+            <h1><a href="index.html">Sully the Dog</a> </h1>
+        
+
     </header>
     <nav>
-            <ul>
-                <li><a href="#aboutme">About Me</a></li>
-                <li><a href="#work">Work</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#resume">Resume</a></li>
-            </ul>
-        </nav>
+        <ul>
+            <li><a href="#aboutme">About Me</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#resume">Resume</a></li>
+        </ul>
+    </nav>
     <figure class="dogProgrammer"></figure>
-   
+
     <h2 id="aboutme">About Me</h2>
     <section id="aboutmeblurb">
         <p>
-            I am Sully the Springer Spaniel, and I am the best canine web developer you've ever seen.  I'm utterly adorable.
-            I was volunteered into this position because the actual student web dev is unsure about what they really want for 
-            their portfolio site.  So you get to look at me instead.
+            I am Sully the Springer Spaniel, and I am the best canine web developer you've ever seen. I'm utterly
+            adorable.
+            I was volunteered into this position because the actual student web dev is unsure about what they really
+            want for
+            their portfolio site. So you get to look at me instead.
         </p>
     </section>
     <h2 id="work">Work</h2>
     <main>
         <section class="cardBig">
-           
-            <img class="container" src="assets\Screenshot163237.jpg" alt = 'Work Scheduler screenshot'> 
+            <a href="https://scrysis.github.io/work-schedule/" target="_blank">
+                <img class="container" src="assets\Screenshot163237.jpg" alt='Work Scheduler screenshot'> </a>
             <div class="cardInfo">
                 <h2>Work Scheduler - Javascript</h2>
             </div>
         </section>
         <section class="card">
-            <img class="container" src="assets\codecode.jpg" alt = 'Fake Example'> 
+            <img class="container" src="assets\codecode.jpg" alt='Fake Example'>
             <div class="cardInfo">
                 <h2>Fake Example</h2>
-            </div>          
+            </div>
         </section>
         <section class="card">
-            <img class="container" src="assets\35196.jpg" alt = 'Fake Example'> 
+            <img class="container" src="assets\35196.jpg" alt='Fake Example'>
             <div class="cardInfo">
                 <h2>Fake Example</h2>
-            </div>          
+            </div>
         </section>
         <section class="card">
-            <img class="container" src="assets\code-1839406_1280.jpg" alt = 'Fake Example'><div class="cardInfo">
+            <img class="container" src="assets\code-1839406_1280.jpg" alt='Fake Example'>
+            <div class="cardInfo">
                 <h2>Fake Example</h2>
-            </div>           
+            </div>
         </section>
         <section class="card">
-            <img class="container" src="assets\istockphoto-122204403-612x612.jpg" alt = 'Fake Example'> <div class="cardInfo">
+            <img class="container" src="assets\istockphoto-122204403-612x612.jpg" alt='Fake Example'>
+            <div class="cardInfo">
                 <h2>Fake Example</h2>
-            </div>          
+            </div>
         </section>
-        
-   </main>
-    
+
+    </main>
+
+    <h2 id="resume">Resume</h2>
+    <!-- Some assistance from https://stackoverflow.com/questions/9208657/how-to-create-downloadable-link-to-text-file
+    for helping me find how to create a download link -->
+    <a id="resumeItem" download href="assets\FakeResume.txt">"Resume.txt"</a>
+
+    <h2 id="contact">Contact</h2>
+    <div id="contactItems">
+        <ul>
+            <li>Email: superfake@gmail.com </li>
+            <li>Phone: (999) 999-9999</li>
+        </ul>
+    </div>
+
+
 </body>
+
 </html>
