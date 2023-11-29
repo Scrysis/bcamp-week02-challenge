@@ -28,6 +28,7 @@ h2 {
 img {
     width: 700px;
     height: auto;
+    object-fit: contain;
 }
 
 .header {
@@ -86,6 +87,7 @@ p {
 main {
     display: flex;
     flex-wrap: wrap;
+    align-items: flex-start;
 }
 
 .container {
@@ -122,9 +124,11 @@ main {
     grid-column: 1;
 }
 
-.cardBig {
-    
-    width: 30%;
+.cardBig {    
+    width: 100%;
+    flex-grow: 1 1 500px;
+    flex-shrink: 0.5;
+    height: calc(width * 0.5);
     padding: 20px;
     text-align: center;
     border-style: solid;
@@ -132,15 +136,20 @@ main {
     border-color: var(--card-highlight);
     background-color: var(--detail-color);
 }
-
+/* Recieved a little help from the second answer on
+ https://stackoverflow.com/questions/37127384/why-isnt-object-fit-working-in-flexbox/37133495#37133495 */
 .cardBig img{
+    height: 100%;
     width: 100%;
+    object-fit: cover;
+    overflow: hidden;
 }
 
-.card {
-    flex-grow: 1;
+.card {    
+    flex-grow: 1 1 300px;
     flex-shrink: 0.5;
-    width: 300px;
+    width: 48.5%;    
+    height: 500px;
     padding: 10px;
     margin: 1px;
     text-align: center;
@@ -149,6 +158,22 @@ main {
     border-color: var(--card-highlight);
     background-color: var(--detail-color);
 }
+/* Recieved a little help from the second answer on
+ https://stackoverflow.com/questions/37127384/why-isnt-object-fit-working-in-flexbox/37133495#37133495 */
 .card img{
+    height: 100%;
     width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+.cardInfo{
+    position:relative;
+    text-align: center;
+    bottom: 20%;
+    left: 1px;
+    z-index: 1;
+    background-color: var(--card-highlight);
+    color: var(--sea-background);
+    width: 20%;
+    height: 75px;
 }
