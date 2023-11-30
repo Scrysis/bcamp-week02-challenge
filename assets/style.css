@@ -9,7 +9,11 @@
 html {
     scroll-behavior: smooth;
 }
-
+/* So in order to maintain a set look and rigid function, grid display was chosen with the first column being a set
+width and the second colum taking the remaining width.  Each element was allocated a specific set of coordinates.  This
+way, the "About me" marker would line up always with the descriptive paragraph.  The "work" marker would always line up with
+where the examples started.  So on and so forth.  This means that setting the links would always lead to the correct area in
+the page. */
 body {
     display: grid;
     grid-template-columns: 250px 1fr;
@@ -85,7 +89,9 @@ a {
 p {
     color: var(--body-text-color);
 }
-
+/* So we're doing something a little different here.  The main "container" sits along the grid like any other good container, 
+but inside of main, we're going to implement flex and flexwrap.  The idea here is that we can implement more creative and 
+fluid orientation. */
 main {
     display: flex;
     flex-wrap: wrap;
@@ -97,7 +103,8 @@ main {
 .container {
     object-fit: contain;
 }
-
+/* This is the absolutely giant picture of a springer spaniel (I have no regrets).  In order to maintain cohesiveness, it
+needs to span TWO columns. */
 .dogProgrammer {
     grid-row: 2;
     grid-column: span 2;
