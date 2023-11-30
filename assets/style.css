@@ -245,8 +245,59 @@ Also got couldn't resist trying to put in the transition effect in there as well
     
 }
 
-
-@media screen and (max-width: 574px) {
-    /* Stopped here.  For real this time. */
-    
+@media screen and (max-width: 1050px) {
+    body, nav{
+        display: flex;
+        flex: wrap;
+        flex-direction: column;
+    }
+    .dogProgrammer{
+        height: 500px;
+    }
+    #aboutme, #work, #resume, #contact{
+        text-align: center;
+        border-right: 0px;
+        border-bottom: 8px solid var(--nav-blue);
+    }
+    .cardBig{
+        aspect-ratio: 1/1;
+        width: 100%;
+        
+    }
+    .card{
+       height: 350px;
+       width: 48%;
+    }
+    .cardInfo{
+        height: 50px;
+        width: 30%;
+    }
+    .cardInfo h2{
+        font-size: small;
+    }
+}
+@media screen and (max-width: 600px) {
+    body, nav, .cardBig, .card{
+        display: flex;
+        flex: wrap;
+        flex-direction: column;
+    }
+    .dogProgrammer{
+        height: 300px;
+    }
+    #aboutme, #work, #resume, #contact{
+        text-align: center;
+    }
+    .cardBig{
+        aspect-ratio: 1/1;
+        width: 100%;
+        
+    }
+    .cardInfo{
+        height: 40px;
+        width: 20%;
+    }
+    .cardInfo h2{
+        font-size: small;
+    }
 }
